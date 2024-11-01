@@ -1,0 +1,60 @@
+{
+  "name": "pincat",
+  "author": "Rempty <https://github.com/emptygamer>",
+  "homepage": "https://github.com/emptygamer",
+  "productName": "Pincat",
+  "description": "Pincat Browser",
+  "version": "1.0.0",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-windows": "electron-builder --win --x64",
+    "build-linux": "npx electron-builder --linux",
+    "build-mac": "sudo cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --x64"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^23.3.13",
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "com.Pincat.PincatBrowser",
+    "mac": {
+      "target": [
+        "dmg",
+        "7z"
+      ],
+      "icon": "icon.png"
+    },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "icon": "./icon/icon.ico"
+    },
+    "nsis":{
+      "oneClick":false,
+      "installerIcon":"./icon/icon.ico",
+      "uninstallDisplayName":"Pincat Uninstaller",
+      "allowToChangeInstallationDirectory":true
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "7z",
+        "deb"
+      ],
+      "category":"Network",
+      "icon": "./icon/"
+    }
+  },
+  "nsis": {
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "fast-glob": "^3.3.2"
+  }
+}

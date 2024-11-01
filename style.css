@@ -1,0 +1,240 @@
+:root {
+    --tool-icon-color: #f6f6f6;
+}
+
+html,body{
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    margin: 0px;
+    font-family: Arial;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+#bar-container{
+    width: calc(100% - 2px);
+    -webkit-app-region: drag;
+    height: 24px;
+    margin: 1px;
+    margin-bottom: 0px;
+    background-color: rgb(52,63,71);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    float: left;
+}
+
+#bar-title{
+    display: flex;
+    float: left;
+    white-space: nowrap;
+
+    align-items: center;
+    height: 24px;
+    font-size: 16px;
+    margin-left: 6px;
+    font-weight: 500;
+    color: #f0f9fdeb;
+    flex-shrink: 1;
+    word-break: break-all;
+    overflow: hidden;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.bar-icon{
+    float: left;
+    flex-shrink: 0;
+    width: 18px;
+    object-fit: scale-down;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 8px;
+}
+.bar-item-splitter{
+    width: 5px;
+    flex-shrink: 0;
+    margin-left: auto;
+    display: block;
+}
+.bar-item-group{
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+.bar-item{
+    -webkit-app-region: none;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 0px;
+    font-size: 12px;
+    margin-left: auto;
+    text-align:center;
+
+    text-shadow: 0 0 2px rgba(230, 239, 233, 0.5);
+    color: #f0f9fd;
+    border: none;
+    background: none;
+    opacity: 0.95;
+}
+.bar-item:hover{
+    background:#8c949a;
+}
+#url-container{
+    width: 100vw;
+    height: 24px;
+    overflow: visible;
+    padding-left: 1px;
+    padding-right: 1px;
+    /* animation: slide-in 1s ease forwards; */
+}
+#url-container[hide]{
+    width: 100vw;
+    height: 0px;
+    overflow: hidden;
+    /* animation: slide-out 1s ease forwards; */
+}
+
+#webview-container{
+    top:48px;
+    left:0px;
+    width: 100vw;
+    flex-grow: 1;
+    overflow:hidden;
+}
+
+#url-btn{
+    margin: 0px;
+    width: 20%;
+    min-width: 68px;
+}
+.url-area{
+    display: inline-flex;
+    width: 100vw;
+    height: 24px;
+}
+#yt{
+    border: 0px;
+}
+
+@keyframes slide-in {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 24px;
+    }
+}
+@keyframes slide-out {
+    from {
+      height: 24px;
+    }
+    to {
+      height: 0px;
+    }
+}
+
+.pincat-dropdown{
+    position: relative;
+}
+
+.pincat-dropdown-menu{
+    display:none;
+    position: absolute;
+    background-color: rgb(52,63,71);
+    pointer-events: none;
+    transition: opacity 150ms ease-in-out;
+    height: 210px;
+    width: 200px;
+    overflow-y: scroll;
+    z-index: 9999;
+    pointer-events: auto;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.pincat-dropdown-text{
+    color: #f0f9fdeb;
+    margin: 4px;
+    white-space: nowrap;
+}
+
+.pincat-dropdown.active > [pincat-dropdown-button] + .pincat-dropdown-menu{
+    display: inherit;
+}
+
+.pincat-dropdown-menu-button{
+    display: block ;
+    pointer-events: auto;
+    margin-top: 2px;
+    margin-bottom: 4px;
+    color: #f0f9fd;
+    border: none;
+    background-color: rgb(52,63,71);
+    margin: 0 auto;
+}
+.pincat-dropdown-menu-button.built-in{
+    color: #ff8077 ;
+}
+
+.pincat-dropdown-menu-button:hover{
+    color: rgb(52,63,71);
+    background-color: #f0f9fd;
+}
+
+#url-input{
+    border: none;
+    background-color: #171a1d;
+    color: #f0f9fd;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#url-input{
+    margin: 0px;
+    width: 80%;
+}
+#url-input[file-dragging]{
+    border:solid;
+    border-width: 2px;
+    /* background-color: #8ca7c2; */
+}
+#url-input::placeholder {
+    color: rgb(136, 136, 136);
+}
+
+.toolbox-item{
+    border-color: #171a1d;
+    border-width: 1px;
+    background-color: rgb(84, 93, 99);
+    color:#f0f9fd;
+    height:24px;
+    padding-left: 2px;
+    padding-right: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbox-item:hover{
+    background-color: rgb(94, 107, 115);
+}
+
+.toolbox-item:active{
+    background-color: rgb(73, 84, 91);
+}
+
+.svg-icon{
+    pointer-events: none;
+}
+
+.svg-icon[hide]{
+    visibility: hidden;
+}
+.svg-icon[remove]{
+    display: none;
+}
