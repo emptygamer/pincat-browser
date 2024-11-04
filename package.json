@@ -31,11 +31,11 @@
         "portable",
         "nsis"
       ],
-      "icon": "./icon/icon.ico"
+      "icon": "./icons/icon.ico"
     },
     "nsis":{
       "oneClick":false,
-      "installerIcon":"./icon/icon.ico",
+      "installerIcon":"./icons/icon.ico",
       "uninstallDisplayName":"Pincat Uninstaller",
       "allowToChangeInstallationDirectory":true
     },
@@ -46,7 +46,7 @@
         "deb"
       ],
       "category":"Network",
-      "icon": "./icon/"
+      "icon": "./icons/"
     }
   },
   "nsis": {

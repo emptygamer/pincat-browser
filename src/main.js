@@ -1,4 +1,5 @@
 const {app, BrowserView, BrowserWindow, screen} = require('electron') ;
+const path = require('path') ;
 let win;
 
 require('@electron/remote/main').initialize();
@@ -11,7 +12,7 @@ function createWindow () {
                             resizable:true,
                             width:1280/2,
                             height:720/2,
-                            icon: __dirname + '/icon.png',
+                            icon: path.join(__dirname, "../", '/icon.png'),
                             webPreferences: {
                               nodeIntegration: true,
                               contextIsolation: false,
