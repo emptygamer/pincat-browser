@@ -36,7 +36,6 @@
     "nsis":{
       "oneClick":false,
       "installerIcon":"./icons/icon.ico",
-      "uninstallDisplayName":"Pincat Uninstaller",
       "allowToChangeInstallationDirectory":true
     },
     "linux": {
