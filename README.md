@@ -5,6 +5,8 @@
 
 Pincat only built to provide only the necessary features, with **JavaScript/CSS** scripts injection you can remove unnecessary information or perform some data annotation on the website, and pin it to your screen.
 
+✨Pincat also also supports **local file browsing**. (By dragging the file into the URL bar)
+
 # Instructions
 ## 1. Setup
 Download the scripts or prebuilt files from github repo.
